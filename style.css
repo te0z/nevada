@@ -8,9 +8,10 @@
 }
 
 body {
-	background-image: url(media/pattern.svg);
-	background-repeat: repeat;
-	background-position: center;
+	background: #4A61EB;
+	background: -webkit-radial-gradient(left, #4A61EB, #045D6A);
+	background: -moz-radial-gradient(left, #4A61EB, #045D6A);
+	background: radial-gradient(to right, #4A61EB, #045D6A);
 }
 
 .contenedor {
@@ -19,17 +20,16 @@ body {
 
 /* HEADER */
 header { 
-	justify-content: space-around;
+	overflow: hidden;
 	position: sticky;
 	width:100%;
 	height: 50px;
 	background-color: rgb(240, 236, 236);
 	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-
 }
 
 header nav {
-	float: right;
+	text-align: right;
 	justify-content: right;
 	padding: 7px;
 }
@@ -40,7 +40,7 @@ header >  nav > a {
   padding: 0px 10px;
   text-decoration: none;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 600px;
   text-transform: uppercase;
   transition: color ease-in-out 0.2s; /* efecto suave */
 
@@ -52,53 +52,93 @@ header >  nav > a:hover {
 	
 }
 
-.logowrapper {
+header .logowrapper {
 	position: absolute;
 	display: flex;
-	justify-content:left;/* horizontal center */
-	align-items:left;/* vertical center */
+	
 }
 
-#logo {
-	height: 55px;
+.logowrapper #logo {
+	height:80%;
+
 }
 
 /* SECCIÓN 1 */
 .main-sect {
 	width: 100%;
+	padding-top: 2em;
 }
 
 .contbox{
 	position: relative;
-	width: 35%;
-	background-color: rgb(231, 238, 243);
-	height: 400px;
-	padding: 0px 250px 0px 250px;
+	width: 50%;
+	max-width: 100%;
+	background: rgba(250, 171, 171, 0.25);
+	box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+	backdrop-filter: blur(7.6px);
+	-webkit-backdrop-filter: blur(7.6px);
+	border-radius: 10px;
+	height: 25em;
 	margin: 0 auto;
-	border: 2.5px solid rgb(54, 83, 0);
-	
+	border: 1.5px solid rgb(165, 165, 165);
+	justify-content: center;
+	text-align: center;
 }
 
 
 .contbox h1 {
-	justify-content: center;
-	text-align: center;
-	
+	font-size: 3rem;
+	padding-top: 1.5em;
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .contbox h2 {
-	justify-content: center;
-	text-align: center;
-	
+	padding-top: 1.5em;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
+.button {
+	border-radius: 4px;
+	background-color: #0b5f79;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 10px;
+	width: 30%;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin-top: 50px;
+  }
+  
+  .button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  
+  .button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+  }
+  
+  .button:hover span {
+	padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+	opacity: 1;
+	right: 0;
+  }
 
 /* SECCIÓN 2 */
 .pres-sect {
-	padding: 60px;
-	height: 20em;
+	padding-top: 50px;
+	height: 25em;
 }
 
 .pres-sect h1 {
@@ -117,12 +157,16 @@ header >  nav > a:hover {
 }
 /* FOOTER */
 footer {
-	position: aboslute;
+	position: absolute;
 	width:100%;
 	height: 3.5em;
-	background-color:lawngreen;
+	background-color:rgb(103, 125, 248);
 }
 
+footer p {
+	text-align: center;
+	justify-content: center;
+}
 .socials {
 	display: flex;
 	justify-content: center;
