@@ -14,9 +14,7 @@ body {
 	background: radial-gradient(to right, #4A61EB, #045D6A);
 }
 
-.contenedor {
-	
-}
+
 
 /* HEADER */
 header { 
@@ -157,7 +155,7 @@ header .logowrapper {
 }
 /* FOOTER */
 footer {
-	position: absolute;
+	position: static;
 	width:100%;
 	height: 3.5em;
 	background-color:rgb(103, 125, 248);
