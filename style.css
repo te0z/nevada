@@ -4,14 +4,13 @@
 * {
 	margin: 0;
     font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
 }
 
 body {
-	background: #4A61EB;
-	background: -webkit-radial-gradient(left, #4A61EB, #045D6A);
-	background: -moz-radial-gradient(left, #4A61EB, #045D6A);
-	background: radial-gradient(to right, #4A61EB, #045D6A);
+	background-image: url(grid.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	
 }
 
 
@@ -61,17 +60,25 @@ header .logowrapper {
 
 }
 
+.container {
+	width: 100%;
+	display: grid;
+}
+
 /* SECCIÓN 1 */
 .main-sect {
 	width: 100%;
-	padding-top: 2em;
+	
+	height: 35em;
+	padding-top: 5em;
 }
 
 .contbox{
 	position: relative;
+	
 	width: 50%;
 	max-width: 100%;
-	background: rgba(250, 171, 171, 0.25);
+	background: rgba(211, 243, 255, 0.13);
 	box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
 	backdrop-filter: blur(7.6px);
 	-webkit-backdrop-filter: blur(7.6px);
@@ -88,6 +95,7 @@ header .logowrapper {
 	font-size: 3rem;
 	padding-top: 1.5em;
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .contbox h2 {
